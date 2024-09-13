@@ -11,4 +11,5 @@ Feel free to navigate through the sections below and join me on this journey of 
 
    about me/index
    projects/index
+   blog/index
    contact information/index
