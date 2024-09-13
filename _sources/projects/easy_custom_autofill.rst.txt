@@ -1,0 +1,15 @@
+.. _easy_custom_autofill:
+
+Easy Custom Autofill - Browser Extension
+========================================
+
+⚠️ **This page is under construction!** ⚠️
+
+**Chrome Store Page**: `Chrome Store <https://chromewebstore.google.com/detail/easy-custom-autofill/ilhgjljloaeeiognllkcpcfhiegoacfm>`__
+
+**Technologies Used**: HTML, CSS, JavaScript, Chrome Extensions API
+
+- Developed a Chrome extension to streamline online form filling.
+- Enabled users to save text entries and autofill them into input fields.
+- Implemented a context menu for quick access to saved entries.
+- Emphasized privacy by keeping all data on the user’s device.

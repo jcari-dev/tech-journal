@@ -1,0 +1,23 @@
+.. _chess_online_platform:
+
+Chess Online Platform
+=====================
+
+⚠️ **This page is under construction!** ⚠️
+
+**Live Page**: `PlayChess <https://jorgeschess.app/>`__
+
+**Technologies Used**: React.js, ChakraUI, Auth0, Django, PostgreSQL, Redis, Firebase
+
+- Developed a SPA for online chess with 12 active users and 150+ matches.
+- Implemented real-time multiplayer, dynamic room creation, and Stockfish AI with five difficulty levels and strategic move scoring from -300 to +300.
+- Boosted performance by 27x with Redis caching and ensured robust security with IP blocking and rate limiting.
+- Provided detailed user profiles and match statistics.
+- Deployed on a custom Ubuntu server, showcasing full-stack development and IT infrastructure skills.
+
+.. raw:: html
+
+   <h2 style="font-size: 1.2em;">GitHub Repository</h2>
+
+- **Frontend**: `GitHub <https://github.com/jcari-dev/chess-react>`__
+- **Backend**: `GitHub <https://github.com/jcari-dev/chess-django>`__

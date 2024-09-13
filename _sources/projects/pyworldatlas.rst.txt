@@ -1,0 +1,21 @@
+.. _pyworldatlas:
+
+PyWorldAtlas - Python Package
+=============================
+
+⚠️ **This page is under construction!** ⚠️
+
+**PyPi Page**: `PyPi Package Page <https://pypi.org/project/pyworldatlas/>`__
+
+**Package Documentation**: `Documentation Page <https://jcari-dev.github.io/pyworldatlas-documentation/>`__
+
+**Installation (Python 3.8+)**: ``pip install pyworldatlas``
+
+
+
+**Technologies Used**: Python, SQL, SQLite, Sphinx, Tox
+
+- Creator and maintainer of 'pyworldatlas', a Python package offering detailed country profiles through an efficient, compressed SQLite database.
+- Developed comprehensive data retrieval methods for accessing population, GDP, languages, and more, with a focus on performance, reliability, and political neutrality.
+- Built extensive unit tests ensuring high code quality and reliability, with continuous integration across Python versions 3.8 to 3.12 using Tox.
+- Crafted clean, professional documentation using Sphinx, prioritizing simplicity and speed for end users.

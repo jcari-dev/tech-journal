@@ -1,0 +1,46 @@
+Projects
+========
+
+Highlighted Projects
+--------------------
+
+.. toctree::
+   :maxdepth: 1
+
+   chess_online_platform
+   pyworldatlas
+   easy_custom_autofill
+   
+
+----
+
+- **Chess Online Platform**: An online chess platform with real-time multiplayer and AI integration.
+- **PyWorldAtlas**: A Python package providing comprehensive country profiles using an efficient SQLite database.
+- **Easy Custom Autofill**: A Chrome extension to streamline and secure form-filling tasks.
+
+Archived Projects
+-----------------
+
+.. toctree::
+   :maxdepth: 1
+
+   messaging_app
+   semantic_search_on_entire_english_gutenberg_collection
+   tech_jobs_finder
+   chinese_character_quiz
+   inventory_checker
+   reddit_scrapper_and_discord_bot
+   pokemon_emerald_bot
+   camera_equation_solver
+   stocks_recommendation_website
+
+----
+
+- **Messaging App**: A messaging app with privacy in mind, powered by React and Django.
+- **Semantic Search On Entire English Gutenberg Collection**: This was a very fun project, essentially downloaded the whole collection according to their guidelines, and had tons of fun cleaning the data and playing with it.
+- **Tech Jobs Finder**: This is essentially a collection of 1,800 companies and some data, along with their careers URL.
+- **Chinese Character Quiz**: Made this project for myself in order to practice Chinese radicals.
+- **Inventory Checker**: Powered by Django, you register with your email and give the URL of an out-of-stock item and it will let you know when it back in stock.
+- **Reddit Scrapper and Discord Bot**: This was a project I did during my programming bootcamp, and in it, essentially allowed you to save memes off Reddit and the discord bot would randomly post them on your Discord server!
+- **Pokemon Emerald Bot**: This was a very fun project! It was essentially checking your screen very few seconds and trying to analyze your location in game! It was compatible with MacOS, Linux and Windows!
+- **Camera Equation Solver**: Using React.js and the camera I essentially made an app that was able to solve simple equations using OCR! It was very fun to work on it!

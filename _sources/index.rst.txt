@@ -1,0 +1,15 @@
+Welcome
+=======
+
+In this space, you'll find a collection of my personal tech explorations, insights, and projects. Whether you're here to dive into my latest blog posts, explore the technical challenges I’ve tackled in various projects, or simply learn more about me, you're in the right place.
+
+Feel free to navigate through the sections below and join me on this journey of coding, creating, and problem-solving.
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Contents:
+
+   about me/index
+   blog/index
+   projects/index
+   contact information/index

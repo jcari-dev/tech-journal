@@ -1,0 +1,59 @@
+About Me
+========
+.. image:: /_static/profile_picture.jpeg
+   :align: center
+   :width: 250px
+
+Hello, and welcome to my corner of the web! I'm Jorge, a software engineer originally from the Dominican Republic, now based near Boston. Growing up just two blocks away from the beach, I developed a love for the outdoors and the ocean. I also speak Spanish fluently and carry with me a strong connection to my cultural roots.
+
+I’m deeply passionate about solving complex puzzles and building creative solutions. Coding has been life-changing for me, and one of my long-term goals is to launch an NGO that teaches English, computer literacy, and programming to children in the Dominican Republic. Although this is a project I plan to pursue in a later stage of my life, I’ve already begun researching and planning. I've explored pathways to offer government-recognized certifications, ensuring students gain valuable credentials for their future careers.
+
+I’ve conducted extensive research to identify potential locations, optimizing for accessibility via major public transportation routes. The goal is to facilitate easy and affordable transit to and from the NGO for marginalized communities. I’ve also factored in other variables, such as cost and logistical feasibility, to ensure the location serves those who would benefit the most. Additionally, I’ve engaged with community leaders and local government officials to discuss funding for equipment and explore ways to subsidize the costs of teachers and space.
+
+If you’re someone who shares this vision or can help make it a reality, I’d love to connect with you on `LinkedIn <https://linkedin.com/in/jorge-caridad/>`__!
+
+.. raw:: html
+
+   <h2 style="font-size: 1.2em;">Skills Overview</h2>
+
+Here’s a quick rundown of my technical skill set:
+
+**Programming Languages**:
+  - Python, JavaScript (TypeScript), SQL
+
+**Web Technologies**:
+  - HTML5, CSS3, Bootstrap, Material UI, Chakra UI
+
+**Frameworks/Libraries**:
+  - React.js, Django, Node.js, Express.js, FastAPI, jQuery, Pandas, NumPy
+
+**Tools/Platforms**:
+  - Git, GitHub, Jupyter Notebook, Postman, CI/CD, Unit Testing
+
+**Cloud/DevOps**:
+  - Docker, Nginx, Apache, Heroku, Vercel, Ngrok, Firebase, AWS, GCP, Azure, Cloud Hosting, Datadog
+
+**Databases**:
+  - PostgreSQL, MySQL, MongoDB, NoSQL, Redis
+
+**Methodologies**:
+  - Agile, Scrum, TDD (Test-Driven Development), Continuous Integration, Continuous Deployment
+
+**Development Practices**:
+  - Unit Testing, Integration Testing, Code Reviews, Version Control (Git)
+
+
+.. raw:: html
+
+   <h2 style="font-size: 1.2em;">Favorites</h2>
+
+- **Favorite Food**: There are so many, but fried green plantains, along with fried beef, avocado, pickled onions, and lime, definitely takes the cake!
+- **Favorite Game**: Probably *Elsword Online*. I met so many amazing people through that game who changed my life in a positive way. Console-wise? Probably *Harvest Moon 64* or *Pokemon Emerald*.
+- **Favorite Series**: Can't pick just one! Here are my top 3:
+
+  1. `Rebuild of Evangelion <https://en.wikipedia.org/wiki/Rebuild_of_Evangelion>`__
+  2. `Mushishi <https://myanimelist.net/anime/457/Mushishi>`__
+  3. `Sousou no Frieren <https://myanimelist.net/anime/52991/Sousou_no_Frieren>`__
+
+- **Favorite Song of the Moment**: `Arlindo Cruz - Meu Lugar (Ao Vivo) <https://www.youtube.com/watch?v=vNK58tL6J70>`__ 
+  Been hooked on Samba! It is so amazing.

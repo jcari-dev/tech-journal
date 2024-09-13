@@ -1,0 +1,9 @@
+Blog
+====
+
+⚠️ **This page is under construction!** ⚠️
+
+🚀 In this space, I will probably post my solutions to Project Euler or LeetCode problems! 💡
+
+💻 Or anything fun I find that’s tech-related! 🎉👨‍💻✨
+
