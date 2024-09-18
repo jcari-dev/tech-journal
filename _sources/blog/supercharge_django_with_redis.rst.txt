@@ -138,7 +138,7 @@ Now, update your `settings.py` to configure Redis as your cache backend:
 
 This tells Django to use Redis as the cache backend, connecting to the Redis server running locally.
 
-### 🚨 **Important: Redis Service Must Be Running** 🚨
+🚨 **Important: Redis Service Must Be Running** 🚨
 
 Before running your Django app, **ensure that the Redis service is running**, otherwise you'll encounter a connection error.
 
