@@ -2,6 +2,7 @@ About Me
 ========
 .. image:: /_static/profile_picture.jpeg
    :align: center
+   :class: profile
    :width: 250px
 
 Hello, and welcome to my corner of the web! I'm Jorge, a software engineer originally from the Dominican Republic, now based near Boston. Growing up just two blocks away from the beach, I developed a love for the outdoors and the ocean. I also speak Spanish fluently and carry with me a strong connection to my cultural roots.

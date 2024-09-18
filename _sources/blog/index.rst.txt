@@ -1,9 +1,14 @@
 Blog
 ====
 
-⚠️ **This page is under construction!** ⚠️
+Welcome to my tech space! 🚀 Here, you'll find all sorts of tech gems—whether it's Project Euler/LeetCode solutions, cool ways to implement things, or fun programming tricks to level up your skills. 💻✨
 
-🚀 In this space, I will probably post my solutions to Project Euler or LeetCode problems! 💡
+Latest Posts
+------------
 
-💻 Or anything fun I find that’s tech-related! 🎉👨‍💻✨
+.. toctree::
+    :maxdepth: 1
+
+    2024-09-14 - 🚀 Supercharge Your Django with Redis: Boost Performance Like a Pro! 🔥 <supercharge_django_with_redis>
+
 

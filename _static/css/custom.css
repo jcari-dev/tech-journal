@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5, h6, p, li, dt, dd, code, pre {
     font-family: 'IBM Plex Mono', monospace !important;
 }
 
-img {
+.profile {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -20,3 +20,4 @@ a {
 a.no-underline {
     text-decoration: none;
 }
+
