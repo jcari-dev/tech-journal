@@ -87,7 +87,7 @@ The log file looks like this:
 
 .. raw:: html
 
-   <p>Yep, I have a cat named Milo and he's wonderful <a href="https://placeholder-need-to-upload-to-github-first" target="_blank">pic here</a>.</p>
+   <p>Yep, I have a cat named Milo and he's wonderful <a href="https://raw.githubusercontent.com/jcari-dev/tech-journal/refs/heads/main/_static/blog/findstr/milocute.jpg" target="_blank">pic here</a>.</p>
 
 
 
