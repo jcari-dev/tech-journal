@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>🔍 Supercharge Your Windows Search: Find Specific Text with findstr Like a Pro! ⚡ &#8212; Jorge&#39;s Tech Notes 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=12dfc556" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=df8e519e" />
+    <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="🚀 Supercharge Your Django REST APIs with Redis: Boost Performance Like a Pro! 🔥" href="supercharge_django_with_redis.html" />
+    <link rel="prev" title="Blog" href="index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="supercharge-your-windows-search-find-specific-text-with-findstr-like-a-pro">
+<span id="supercharge-windows-search-with-findstr"></span><h1>🔍 Supercharge Your Windows Search: Find Specific Text with <code class="docutils literal notranslate"><span class="pre">findstr</span></code> Like a Pro! ⚡<a class="headerlink" href="#supercharge-your-windows-search-find-specific-text-with-findstr-like-a-pro" title="Link to this heading">¶</a></h1>
+<p><strong>⏱ Estimated Reading Time: about 9 minutes.</strong></p>
+<section id="page-index">
+<h2>Page Index<a class="headerlink" href="#page-index" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#windows-findstr-introduction"><span class="std std-ref">1. Introduction</span></a></p></li>
+<li><p><a class="reference internal" href="#what-is-findstr"><span class="std std-ref">2. What is findstr?</span></a></p></li>
+<li><p><a class="reference internal" href="#why-use-findstr"><span class="std std-ref">3. Why Use findstr?</span></a></p></li>
+<li><p><a class="reference internal" href="#how-to-use-findstr"><span class="std std-ref">4. How to Use findstr in Windows Command Prompt</span></a></p></li>
+<li><p><a class="reference internal" href="#advanced-features-of-findstr"><span class="std std-ref">5. Advanced Features of findstr</span></a></p></li>
+<li><p><a class="reference internal" href="#findstr-conclusion"><span class="std std-ref">6. Conclusion</span></a></p></li>
+<li><p><a class="reference internal" href="#findstr-additional-resources"><span class="std std-ref">7. Additional Resources</span></a></p></li>
+</ul>
+</section>
+<section id="introduction">
+<span id="windows-findstr-introduction"></span><h2>1. Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
+<p>Ever tried searching for a specific file that has one specific piece of text- like you exactly know what it says, but just don’t seem to find it?  It can feel like searching for a needle in a haystack. Fortunately, there’s a command-line tool called <cite>findstr</cite> that can save you loads of time by allowing you to search files or directories for specific text patterns.</p>
+<p>In this guide, we’ll show you how to harness the (💪) power of <cite>findstr</cite> to quickly locate specific text within files on your Windows machine, making text searching as fast and efficient as possible.</p>
+<p><em>Quick Backstory: I had one of those “whoops” moments where I couldn’t find a file that hadn’t been pushed to GitHub yet. I knew exactly what was supposed to be in it—but tracking it down was tricky. After some searching (and finding nothing 👀), I turned to Google and stumbled upon this amazing command</em> <code class="docutils literal notranslate"><span class="pre">findstr</span></code>  <em>and it saved the day! It’s crazy fast. Hopefully, this will be just as helpful for any of you!</em></p>
+<p>Let’s continue- Ahem!</p>
+</section>
+<section id="what-is-findstr">
+<span id="id1"></span><h2>2. What is <cite>findstr</cite>?<a class="headerlink" href="#what-is-findstr" title="Link to this heading">¶</a></h2>
+<p><cite>findstr</cite> is a powerful command-line utility in Windows that allows you to search for specific strings or patterns inside files. Similar to Linux’s <cite>grep</cite>, <cite>findstr</cite> supports regular expressions and can be used to search across multiple files or entire directories for matching patterns.</p>
+<p>In simpler terms, <cite>findstr</cite> helps you find text inside files using patterns you define.</p>
+</section>
+<section id="why-use-findstr">
+<span id="id2"></span><h2>3. Why Use <cite>findstr</cite>?<a class="headerlink" href="#why-use-findstr" title="Link to this heading">¶</a></h2>
+<p>There are several reasons why <cite>findstr</cite> is your go-to tool for text searching on Windows:</p>
+<ul class="simple">
+<li><p><strong>Easy to use</strong>: Straight forward and to the point command.</p></li>
+<li><p><strong>Efficiency</strong>: It searches through files and directories quickly.</p></li>
+<li><p><strong>Regular Expressions</strong>: Allows for complex pattern matching (Because clearly, not finding the file wasn’t enough fun—let’s add some regex to really spice things up!).</p></li>
+<li><p><strong>Wildcard Support</strong>: You can search across multiple files using wildcards.</p></li>
+<li><p><strong>Native to Windows</strong>: No need to install third-party software (this is a huge plus!).</p></li>
+<li><p><strong>Flex Potential</strong>: Quick and effective command to remember, help your coworker find that file in 10 seconds just by doing some arcane magic 🧙‍♂️ in his/her terminal!</p></li>
+</ul>
+<p>Whether you need to search for error codes in logs, specific function calls in code files, or any text across different files, <cite>findstr</cite> can make your life easier. 😊</p>
+</section>
+<section id="how-to-use-findstr-in-windows-command-prompt">
+<span id="how-to-use-findstr"></span><h2>4. How to Use <cite>findstr</cite> in Windows Command Prompt<a class="headerlink" href="#how-to-use-findstr-in-windows-command-prompt" title="Link to this heading">¶</a></h2>
+<p>Using <cite>findstr</cite> is straightforward. You can run it directly in your Command Prompt (CMD). Here’s a basic syntax:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>findstr [options] &quot;search_string&quot; filename
+</pre></div>
+</div>
+<p>Let’s see some examples, to try to understand it better.</p>
+<p><strong>Example 1.</strong> Search for a specific string in a file</p>
+<p>Let’s say you want to search for the word “ERROR” in a log file:</p>
+<p>The log file looks like this:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[Wed Oct 18 15:35:10 2024] [INFO] Milo the cat initialized. Status: Cute.
+[Wed Oct 18 15:36:22 2024] [ERROR] Treat supply exhausted. Action required: Refill treat jar.
+[Wed Oct 18 15:38:03 2024] [WARNING] Milo detected staring at empty treat jar. User interaction needed.
+[Wed Oct 18 15:40:55 2024] [ERROR] Failed to locate toy mouse. Milo is bored.
+[Wed Oct 18 15:42:18 2024] [INFO] Attempting to engage Milo with laser pointer.
+[Wed Oct 18 15:42:42 2024] [ERROR] Milo uninterested in laser pointer. Searching for alternate entertainment.
+[Wed Oct 18 15:43:59 2024] [CRITICAL] Milo demand for cuddles exceeded limit. Immediate attention required.
+[Wed Oct 18 15:44:30 2024] [INFO] Milo received cuddle. Status: Purring.
+</pre></div>
+</div>
+<p>Yep, I have a cat named Milo and he's wonderful <a href="https://placeholder-need-to-upload-to-github-first" target="_blank">pic here</a>.</p><p>Now let’s say we want to find all the “ERRORS” in this specific log file.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>findstr<span class="w"> </span><span class="s2">&quot;ERROR&quot;</span><span class="w"> </span>milo0001.log
+</pre></div>
+</div>
+<p>This command will return all lines in the <cite>milo0001.log</cite> file that contain the word “ERROR”.</p>
+<p>Which would look like this:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[Wed Oct 18 15:36:22 2024] [ERROR] Treat supply exhausted. Action required: Refill treat jar.
+[Wed Oct 18 15:40:55 2024] [ERROR] Failed to locate toy mouse. Milo is bored.
+[Wed Oct 18 15:42:42 2024] [ERROR] Milo uninterested in laser pointer. Searching for alternate entertainment.
+</pre></div>
+</div>
+<p>Kind of useful, but IMO it becomes a lot more useful if you add the flag <strong>/N</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>findstr<span class="w"> </span>/N<span class="w"> </span><span class="s2">&quot;ERROR&quot;</span><span class="w"> </span>milo0001.log
+</pre></div>
+</div>
+<p>Then you get an output like this:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>2:[Wed Oct 18 15:36:22 2024] [ERROR] Treat supply exhausted. Action required: Refill treat jar.
+4:[Wed Oct 18 15:40:55 2024] [ERROR] Failed to locate toy mouse. Milo is bored.
+6:[Wed Oct 18 15:42:42 2024] [ERROR] Milo uninterested in laser pointer. Searching for alternate entertainment.
+</pre></div>
+</div>
+<p>Now, each result has the line number attached to the left, now is truly useful.</p>
+<p>But- wait, how can I use this command to actually find files?! And- did we just use a flag without me explaining what a flag is?!</p>
+<p>Moving on… (yep, I’m not explaining flags, at all-)</p>
+<p><strong>JK</strong></p>
+</section>
+<section id="flags">
+<h2>Flags:<a class="headerlink" href="#flags" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>/R</strong>: Uses <strong>regular expressions</strong> for pattern matching (for when you really want to overcomplicate things 😉).</p></li>
+<li><p><strong>/N</strong>: Shows the <strong>line numbers</strong> in the output (what we just used!).</p></li>
+<li><p><strong>/I</strong>: Makes the search <strong>case-insensitive</strong> (command will now match the followings: ERROR, Error, error, etc.).</p></li>
+<li><p><strong>/S</strong>: Searches <strong>subdirectories</strong> as well as the current directory.</p></li>
+</ul>
+<p>These are the most commonly used flags you’ll need to know for now! Now let’s move on and see what more <cite>findstr</cite> can do! 😎</p>
+<p><strong>Example 2. Search across multiple files in a directory</strong></p>
+<p>Let’s say you have not just one milo.log file but thousands—milo0001.log, milo0002.log, milo0003.log… Milo’s life is so fascinating that the logs are piling up fast! Searching through each one individually? No one has time for that.</p>
+<p>This is where findstr truly shines. 😎 Instead of searching file by file, you can use findstr to search across multiple files in a single go:</p>
+<p>Here’s how you do it:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>findstr<span class="w"> </span><span class="s2">&quot;ERROR&quot;</span><span class="w"> </span>milo*.log
+</pre></div>
+</div>
+<p>This command will search through <strong>all</strong> log files that start with “milo” and end with <cite>.log</cite>, finding every line containing the word “ERROR.”</p>
+<p>And, boom! You’ll get something like this:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>milo0001.log:[Wed Oct 18 15:36:22 2024] [ERROR] Treat supply exhausted. Action required: Refill treat jar.
+milo0001.log:[Wed Oct 18 15:40:55 2024] [ERROR] Failed to locate toy mouse. Milo is bored.
+milo0001.log:[Wed Oct 18 15:42:42 2024] [ERROR] Milo uninterested in laser pointer. Searching for alternate entertainment.
+milo0002.log:[Thu Oct 19 09:12:01 2024] [ERROR] Cuddle request denied. User is busy working.
+</pre></div>
+</div>
+<p>This is magical 🧙‍♂️✨. As you can see this shows that you have some errors in milo0001, but also in milo0002!</p>
+<p><strong>Example 3: Search recursively through directories</strong></p>
+<p>Alright, things are about to get real. Let’s say Milo’s logs aren’t just piling up in one folder. Maybe you’ve got them scattered across subdirectories (why is Milo’s log structure so complicated, you ask? Well, he’s a sophisticated cat 🐱).</p>
+<p>Fear not! You can search through all subdirectories <em>recursively</em> (meaning, it will search across all the subdirectories in the current directory) with this handy option:</p>
+<p><em>Assuming we have now navigated to our main</em> <strong>logs</strong> folder (or wherever our <strong>log files</strong> are located—in Milo’s case, it’s in <strong>logs</strong>).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>findstr<span class="w"> </span>/S<span class="w"> </span><span class="s2">&quot;ERROR&quot;</span><span class="w"> </span>milo*.log
+</pre></div>
+</div>
+<p><em>This is the command that I used to find the file I needed, instead of .log, it was .py because I was looking for a python file!</em></p>
+<p>Here’s what happens:</p>
+<ul class="simple">
+<li><p>The <strong>/S</strong> flag tells <strong>findstr</strong> to search not just in the current directory but <em>all</em> subdirectories (as mentioned above).</p></li>
+<li><p><cite>*.log</cite> means it will look for all <strong>.log</strong> files.</p></li>
+</ul>
+<p>You’ll end up with results like:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>logs/milo2024/milo0001.log:[Wed Oct 18 15:36:22 2024] [ERROR] Treat supply exhausted. Action required: Refill treat jar.
+logs/milo2024/milo0002.log:[Thu Oct 19 09:12:01 2024] [ERROR] Cuddle request denied. User is busy working.
+</pre></div>
+</div>
+<p>Pretty neat, right? Now, no matter where Milo’s shenanigans are logged, you’ll find them.🕵️‍♂️</p>
+</section>
+<section id="advanced-features-of-findstr">
+<span id="id3"></span><h2>5. Advanced Features of <cite>findstr</cite><a class="headerlink" href="#advanced-features-of-findstr" title="Link to this heading">¶</a></h2>
+<p>Alright, we’ve covered the basics, but now let’s level up and check out some of the advanced tricks <cite>findstr</cite> has up its sleeve. Let’s say you want to get fancy while you’re investigating Milo’s logs. Here are some ways to get the most out of <cite>findstr</cite>.</p>
+<p><strong>1. Using Regular Expressions (Yes, we’re really going there 😅)</strong></p>
+<p>Let’s go back to our directory <em>logs/milo2024/</em> to continue our journey!</p>
+<p>Sometimes a regular text search just won’t cut it—especially if Milo’s been busy causing trouble. Say you need to find specific lines in your logs, like those that contain <cite>[CRITICAL]</cite> messages followed by the word “cuddle.” This is where <strong>regular expressions</strong> step in to save the day.</p>
+<p>Here’s a command that will help you track down those critical cuddle demands in Milo’s logs:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>findstr<span class="w"> </span>/R<span class="w"> </span>/N<span class="w"> </span><span class="s2">&quot;\[CRITICAL\].*cuddle&quot;</span><span class="w"> </span>milo*.log
+</pre></div>
+</div>
+<p>Quick Flag Breakdown:</p>
+<ul class="simple">
+<li><p><strong>/R</strong>: Tells <cite>findstr</cite> you’re using a <strong>regular expression</strong> for pattern matching.</p></li>
+<li><p><strong>/N</strong>: Adds <strong>line numbers</strong> to the output, so you can see exactly where the match occurs.</p></li>
+</ul>
+<p>What the regex does:</p>
+<ul class="simple">
+<li><p><strong>[CRITICAL]`</strong>: Matches the literal text <cite>[CRITICAL]</cite> (with square brackets escaped because they are special regex characters).</p></li>
+<li><p><strong>.*</strong>: Matches any characters (zero or more) between <cite>[CRITICAL]</cite> and “cuddle.”</p></li>
+<li><p><strong>cuddle</strong>: Searches for the word “cuddle” after <cite>[CRITICAL]</cite>.</p></li>
+<li><p><strong>Headaches</strong>: Reason why we sometimes should avoid it altogether.</p></li>
+</ul>
+<p>Example Output:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>milo0001.log:7:[Wed Oct 18 15:43:59 2024] [CRITICAL] Milo demand for cuddles exceeded limit. Immediate attention required.
+</pre></div>
+</div>
+<p>With this command, you’re not only finding the critical moments in your logs, but you’re also pinpointing the exact lines and files where they happen!</p>
+<p><strong>2. Matching Whole Words Only</strong></p>
+<p>Sometimes, you don’t want to match partial words (wait—did I forget to mention that by default, <cite>findstr</cite> only does <strong>partial matching</strong>? Whoops! 😅). Let’s fix that!</p>
+<p>For example, imagine you’re only interested in finding the exact word “ERROR” and not unwanted variations like “TERROR” or “ERRORS.” To ensure you match only the <strong>exact</strong> word on a line, use the <cite>/X</cite> flag:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>findstr<span class="w"> </span>/X<span class="w"> </span><span class="s2">&quot;ERROR&quot;</span><span class="w"> </span>milo*.log
+</pre></div>
+</div>
+<p>This will return only the lines where “ERROR” is the full word. Perfect for tracking exactly when things went wrong!</p>
+<p><strong>3. Inverting the Search (Looking for Non-Errors 🧐)</strong></p>
+<p>What if you want to find the lines where everything was fine and there was no “ERROR”? You can use the <cite>/V</cite> flag to invert your search, which will return all the lines that <em>don’t</em> match the search string.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>findstr<span class="w"> </span>/V<span class="w"> </span><span class="s2">&quot;ERROR&quot;</span><span class="w"> </span>milo0001.log
+</pre></div>
+</div>
+<p>This is great for checking the moments when Milo wasn’t causing trouble—if there are any!</p>
+<p><strong>4. Combining Multiple Search Terms</strong></p>
+<p>Want to search for more than just one word? Easy! You can search for multiple terms at once by listing them out. For example, let’s say you want to find both “ERROR” and “WARNING” in your logs. Just do this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>findstr<span class="w"> </span><span class="s2">&quot;ERROR WARNING&quot;</span><span class="w"> </span>milo*.log
+</pre></div>
+</div>
+<p>This will return any line containing either word, so you can see every time things went wrong <em>and</em> when they were <em>about</em> to go wrong.</p>
+</section>
+<section id="conclusion">
+<span id="findstr-conclusion"></span><h2>6. Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">¶</a></h2>
+<p><cite>findstr</cite> is an incredibly powerful tool that can make searching through text files—whether they’re logs of Milo’s adventures or important system files—a breeze. From basic searches to advanced features like regular expressions and recursive directory searches, <cite>findstr</cite> has you covered.</p>
+<p>So the next time Milo (or your system) causes some trouble, you’ll be ready with the right command to track down those elusive lines of text. Happy searching! 🐾✨</p>
+</section>
+<section id="additional-resources">
+<span id="findstr-additional-resources"></span><h2>7. Additional Resources<a class="headerlink" href="#additional-resources" title="Link to this heading">¶</a></h2>
+<p>For further reading, check out these resources:</p>
+<ul>
+<li><p><strong>Microsoft Docs</strong>: Detailed documentation on the <cite>findstr</cite> command.</p>
+<p><a class="reference external" href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr">https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr</a></p>
+</li>
+</ul>
+</section>
+<section id="final-thoughts-thank-you">
+<h2>8. Final Thoughts &amp; Thank You!<a class="headerlink" href="#final-thoughts-thank-you" title="Link to this heading">¶</a></h2>
+<p>Thank you so much for taking the time to read this guide! 🎉 I hope you found it helpful!</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Jorge's Tech Notes</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about%20me/index.html">About Me</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects/index.html">Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Blog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact%20information/index.html">Contact Information</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Blog</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Blog</a></li>
+      <li>Next: <a href="supercharge_django_with_redis.html" title="next chapter">🚀 Supercharge Your Django REST APIs with Redis: Boost Performance Like a Pro! 🔥</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Jorge Caridad.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../_sources/blog/supercharge_windows_search_with_findstr.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

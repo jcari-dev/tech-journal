@@ -3,12 +3,18 @@ Blog
 
 Welcome to my tech space! 🚀 Here, you'll find all sorts of tech gems—whether it's Project Euler/LeetCode solutions, cool ways to implement things, or fun programming tricks to level up your skills. 💻✨
 
+.. raw:: html
+
+    <p style="font-size: smaller;">PS: Sorry for the emoji spam 🤣 -I mean 😔...</p>
+
 Latest Posts
 ------------
 
 .. toctree::
     :maxdepth: 1
 
+    2024-10-07 - 🔍 Supercharge Your Windows Search: Find Specific Text with "findstr" Like a Pro! ⚡ <supercharge_windows_search_with_findstr>
     2024-09-14 - 🚀 Supercharge Your Django with Redis: Boost Performance Like a Pro! 🔥 <supercharge_django_with_redis>
+
 
 

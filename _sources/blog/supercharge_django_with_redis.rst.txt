@@ -3,6 +3,8 @@
 🚀 Supercharge Your Django REST APIs with Redis: Boost Performance Like a Pro! 🔥
 =================================================================================
 
+**⏱ Estimated Reading Time: about 11 minutes.**
+
 Page Index
 ----------
 - :ref:`1. Introduction <introduction>`

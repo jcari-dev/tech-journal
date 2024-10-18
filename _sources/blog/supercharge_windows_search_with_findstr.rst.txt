@@ -1,0 +1,299 @@
+.. _supercharge_windows_search_with_findstr:
+
+🔍 Supercharge Your Windows Search: Find Specific Text with ``findstr`` Like a Pro! ⚡
+======================================================================================
+
+**⏱ Estimated Reading Time: about 9 minutes.**
+
+Page Index
+----------
+- :ref:`1. Introduction <windows_findstr_introduction>`
+- :ref:`2. What is findstr? <what_is_findstr>`
+- :ref:`3. Why Use findstr? <why_use_findstr>`
+- :ref:`4. How to Use findstr in Windows Command Prompt <how_to_use_findstr>`
+- :ref:`5. Advanced Features of findstr <advanced_features_of_findstr>`
+- :ref:`6. Conclusion <findstr_conclusion>`
+- :ref:`7. Additional Resources <findstr_additional_resources>`
+
+.. _windows_findstr_introduction:
+
+1. Introduction
+---------------
+
+Ever tried searching for a specific file that has one specific piece of text- like you exactly know what it says, but just don't seem to find it?  It can feel like searching for a needle in a haystack. Fortunately, there's a command-line tool called `findstr` that can save you loads of time by allowing you to search files or directories for specific text patterns.
+
+In this guide, we’ll show you how to harness the (💪) power of `findstr` to quickly locate specific text within files on your Windows machine, making text searching as fast and efficient as possible.
+
+*Quick Backstory: I had one of those “whoops” moments where I couldn’t find a file that hadn’t been pushed to GitHub yet. I knew exactly what was supposed to be in it—but tracking it down was tricky. After some searching (and finding nothing 👀), I turned to Google and stumbled upon this amazing command* ``findstr``  *and it saved the day! It’s crazy fast. Hopefully, this will be just as helpful for any of you!*
+
+Let's continue- Ahem!
+
+.. _what_is_findstr:
+
+2. What is `findstr`?
+---------------------
+
+`findstr` is a powerful command-line utility in Windows that allows you to search for specific strings or patterns inside files. Similar to Linux’s `grep`, `findstr` supports regular expressions and can be used to search across multiple files or entire directories for matching patterns.
+
+In simpler terms, `findstr` helps you find text inside files using patterns you define.
+
+.. _why_use_findstr:
+
+3. Why Use `findstr`?
+---------------------
+
+There are several reasons why `findstr` is your go-to tool for text searching on Windows:
+
+- **Easy to use**: Straight forward and to the point command.
+- **Efficiency**: It searches through files and directories quickly.
+- **Regular Expressions**: Allows for complex pattern matching (Because clearly, not finding the file wasn’t enough fun—let's add some regex to really spice things up!).
+- **Wildcard Support**: You can search across multiple files using wildcards.
+- **Native to Windows**: No need to install third-party software (this is a huge plus!).
+- **Flex Potential**: Quick and effective command to remember, help your coworker find that file in 10 seconds just by doing some arcane magic 🧙‍♂️ in his/her terminal!
+  
+Whether you need to search for error codes in logs, specific function calls in code files, or any text across different files, `findstr` can make your life easier. 😊
+
+.. _how_to_use_findstr:
+
+4. How to Use `findstr` in Windows Command Prompt
+-------------------------------------------------
+
+Using `findstr` is straightforward. You can run it directly in your Command Prompt (CMD). Here’s a basic syntax:
+
+.. code-block:: text
+
+    findstr [options] "search_string" filename
+
+Let's see some examples, to try to understand it better.
+
+**Example 1.** Search for a specific string in a file
+
+
+Let’s say you want to search for the word "ERROR" in a log file:
+
+The log file looks like this:
+
+.. code-block:: text
+
+    [Wed Oct 18 15:35:10 2024] [INFO] Milo the cat initialized. Status: Cute.
+    [Wed Oct 18 15:36:22 2024] [ERROR] Treat supply exhausted. Action required: Refill treat jar.
+    [Wed Oct 18 15:38:03 2024] [WARNING] Milo detected staring at empty treat jar. User interaction needed.
+    [Wed Oct 18 15:40:55 2024] [ERROR] Failed to locate toy mouse. Milo is bored.
+    [Wed Oct 18 15:42:18 2024] [INFO] Attempting to engage Milo with laser pointer.
+    [Wed Oct 18 15:42:42 2024] [ERROR] Milo uninterested in laser pointer. Searching for alternate entertainment.
+    [Wed Oct 18 15:43:59 2024] [CRITICAL] Milo demand for cuddles exceeded limit. Immediate attention required.
+    [Wed Oct 18 15:44:30 2024] [INFO] Milo received cuddle. Status: Purring.
+
+
+.. raw:: html
+
+   <p>Yep, I have a cat named Milo and he's wonderful <a href="https://placeholder-need-to-upload-to-github-first" target="_blank">pic here</a>.</p>
+
+
+
+Now let's say we want to find all the "ERRORS" in this specific log file.
+
+.. code-block:: bash
+
+    findstr "ERROR" milo0001.log
+
+This command will return all lines in the `milo0001.log` file that contain the word "ERROR".
+
+Which would look like this:
+
+.. code-block:: text
+
+    [Wed Oct 18 15:36:22 2024] [ERROR] Treat supply exhausted. Action required: Refill treat jar.
+    [Wed Oct 18 15:40:55 2024] [ERROR] Failed to locate toy mouse. Milo is bored.
+    [Wed Oct 18 15:42:42 2024] [ERROR] Milo uninterested in laser pointer. Searching for alternate entertainment.
+    
+Kind of useful, but IMO it becomes a lot more useful if you add the flag **/N**:
+
+.. code-block:: bash
+
+    findstr /N "ERROR" milo0001.log
+
+
+Then you get an output like this:
+
+.. code-block:: text
+
+    2:[Wed Oct 18 15:36:22 2024] [ERROR] Treat supply exhausted. Action required: Refill treat jar.
+    4:[Wed Oct 18 15:40:55 2024] [ERROR] Failed to locate toy mouse. Milo is bored.
+    6:[Wed Oct 18 15:42:42 2024] [ERROR] Milo uninterested in laser pointer. Searching for alternate entertainment.
+
+Now, each result has the line number attached to the left, now is truly useful.
+
+But- wait, how can I use this command to actually find files?! And- did we just use a flag without me explaining what a flag is?!
+
+Moving on... (yep, I'm not explaining flags, at all-)
+
+**JK**
+
+
+Flags:
+------
+
+- **/R**: Uses **regular expressions** for pattern matching (for when you really want to overcomplicate things 😉).
+- **/N**: Shows the **line numbers** in the output (what we just used!).
+- **/I**: Makes the search **case-insensitive** (command will now match the followings: ERROR, Error, error, etc.).
+- **/S**: Searches **subdirectories** as well as the current directory.
+
+These are the most commonly used flags you'll need to know for now! Now let’s move on and see what more `findstr` can do! 😎
+
+**Example 2. Search across multiple files in a directory**
+
+Let’s say you have not just one milo.log file but thousands—milo0001.log, milo0002.log, milo0003.log... Milo’s life is so fascinating that the logs are piling up fast! Searching through each one individually? No one has time for that.
+
+This is where findstr truly shines. 😎 Instead of searching file by file, you can use findstr to search across multiple files in a single go:
+
+Here’s how you do it:
+
+.. code-block:: bash
+
+    findstr "ERROR" milo*.log
+
+This command will search through **all** log files that start with "milo" and end with `.log`, finding every line containing the word "ERROR."
+
+And, boom! You’ll get something like this:
+
+.. code-block:: text
+
+    milo0001.log:[Wed Oct 18 15:36:22 2024] [ERROR] Treat supply exhausted. Action required: Refill treat jar.
+    milo0001.log:[Wed Oct 18 15:40:55 2024] [ERROR] Failed to locate toy mouse. Milo is bored.
+    milo0001.log:[Wed Oct 18 15:42:42 2024] [ERROR] Milo uninterested in laser pointer. Searching for alternate entertainment.
+    milo0002.log:[Thu Oct 19 09:12:01 2024] [ERROR] Cuddle request denied. User is busy working.
+
+This is magical 🧙‍♂️✨. As you can see this shows that you have some errors in milo0001, but also in milo0002!
+
+
+**Example 3: Search recursively through directories**
+
+Alright, things are about to get real. Let’s say Milo’s logs aren’t just piling up in one folder. Maybe you’ve got them scattered across subdirectories (why is Milo’s log structure so complicated, you ask? Well, he's a sophisticated cat 🐱).
+
+Fear not! You can search through all subdirectories *recursively* (meaning, it will search across all the subdirectories in the current directory) with this handy option:
+
+*Assuming we have now navigated to our main* **logs** folder (or wherever our **log files** are located—in Milo’s case, it’s in **logs**).
+
+
+.. code-block:: bash
+
+    findstr /S "ERROR" milo*.log
+
+*This is the command that I used to find the file I needed, instead of .log, it was .py because I was looking for a python file!*
+
+Here’s what happens:
+
+- The **/S** flag tells **findstr** to search not just in the current directory but *all* subdirectories (as mentioned above).
+- `*.log` means it will look for all **.log** files.
+
+You’ll end up with results like:
+
+.. code-block:: text
+
+    logs/milo2024/milo0001.log:[Wed Oct 18 15:36:22 2024] [ERROR] Treat supply exhausted. Action required: Refill treat jar.
+    logs/milo2024/milo0002.log:[Thu Oct 19 09:12:01 2024] [ERROR] Cuddle request denied. User is busy working.
+
+Pretty neat, right? Now, no matter where Milo’s shenanigans are logged, you’ll find them.🕵️‍♂️
+
+
+.. _advanced_features_of_findstr:
+
+5. Advanced Features of `findstr`
+---------------------------------
+
+Alright, we’ve covered the basics, but now let’s level up and check out some of the advanced tricks `findstr` has up its sleeve. Let’s say you want to get fancy while you’re investigating Milo’s logs. Here are some ways to get the most out of `findstr`.
+
+**1. Using Regular Expressions (Yes, we're really going there 😅)**
+
+Let's go back to our directory *logs/milo2024/* to continue our journey!
+
+Sometimes a regular text search just won’t cut it—especially if Milo's been busy causing trouble. Say you need to find specific lines in your logs, like those that contain `[CRITICAL]` messages followed by the word "cuddle." This is where **regular expressions** step in to save the day.
+
+Here’s a command that will help you track down those critical cuddle demands in Milo's logs:
+
+.. code-block:: bash
+
+    findstr /R /N "\[CRITICAL\].*cuddle" milo*.log
+
+Quick Flag Breakdown:
+
+- **/R**: Tells `findstr` you’re using a **regular expression** for pattern matching.
+- **/N**: Adds **line numbers** to the output, so you can see exactly where the match occurs.
+
+What the regex does:
+
+- **\[CRITICAL\]`**: Matches the literal text `[CRITICAL]` (with square brackets escaped because they are special regex characters).
+- **.***: Matches any characters (zero or more) between `[CRITICAL]` and "cuddle."
+- **cuddle**: Searches for the word "cuddle" after `[CRITICAL]`.
+- **Headaches**: Reason why we sometimes should avoid it altogether.
+
+Example Output:
+
+.. code-block:: text
+
+    milo0001.log:7:[Wed Oct 18 15:43:59 2024] [CRITICAL] Milo demand for cuddles exceeded limit. Immediate attention required.
+
+With this command, you're not only finding the critical moments in your logs, but you're also pinpointing the exact lines and files where they happen!
+
+
+**2. Matching Whole Words Only**
+
+Sometimes, you don’t want to match partial words (wait—did I forget to mention that by default, `findstr` only does **partial matching**? Whoops! 😅). Let’s fix that!
+
+For example, imagine you're only interested in finding the exact word "ERROR" and not unwanted variations like "TERROR" or "ERRORS." To ensure you match only the **exact** word on a line, use the `/X` flag:
+
+
+.. code-block:: bash
+
+    findstr /X "ERROR" milo*.log
+
+This will return only the lines where "ERROR" is the full word. Perfect for tracking exactly when things went wrong!
+
+**3. Inverting the Search (Looking for Non-Errors 🧐)**
+
+What if you want to find the lines where everything was fine and there was no "ERROR"? You can use the `/V` flag to invert your search, which will return all the lines that *don’t* match the search string.
+
+.. code-block:: bash
+
+    findstr /V "ERROR" milo0001.log
+
+This is great for checking the moments when Milo wasn’t causing trouble—if there are any!
+
+**4. Combining Multiple Search Terms**
+
+Want to search for more than just one word? Easy! You can search for multiple terms at once by listing them out. For example, let’s say you want to find both "ERROR" and "WARNING" in your logs. Just do this:
+
+.. code-block:: bash
+
+    findstr "ERROR WARNING" milo*.log
+
+This will return any line containing either word, so you can see every time things went wrong *and* when they were *about* to go wrong.
+
+.. _findstr_conclusion:
+
+6. Conclusion
+-------------
+
+`findstr` is an incredibly powerful tool that can make searching through text files—whether they’re logs of Milo’s adventures or important system files—a breeze. From basic searches to advanced features like regular expressions and recursive directory searches, `findstr` has you covered.
+
+So the next time Milo (or your system) causes some trouble, you’ll be ready with the right command to track down those elusive lines of text. Happy searching! 🐾✨
+
+
+.. _findstr_additional_resources:
+
+7. Additional Resources
+-----------------------
+
+For further reading, check out these resources:
+
+- **Microsoft Docs**: Detailed documentation on the `findstr` command.
+
+  .. _findstr_docs: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr
+
+  https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr
+
+8. Final Thoughts & Thank You!
+------------------------------
+
+Thank you so much for taking the time to read this guide! 🎉 I hope you found it helpful!
